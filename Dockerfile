@@ -1,2 +1,2 @@
 FROM openjdk
-ls
+Add Nginx
