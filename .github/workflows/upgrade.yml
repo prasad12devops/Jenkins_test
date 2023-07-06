@@ -26,4 +26,3 @@ jobs:
         with:
           inlineScript: az aks upgrade -g ${{secrets.RESOURCE_GROUP_NAME}} -n ${{secrets.AKS_CLUSTER_NAME}} --node-image-only --yes
 
-has context menu
