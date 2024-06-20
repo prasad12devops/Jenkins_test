@@ -12,13 +12,10 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-
-      - name: Docker Login
-        uses: actions/checkout@v2
+      - name: Azure Login
+        uses: Azure/login@v1.4.5
         with:
-          login-server: ${{ secrets.AZURE_URL }}
-          username: ${{ secrets.ACR_USERNAME }}
-          password: ${{ secrets.ACR_PASSWORD }}
+          creds: ${{ secrets.AZURE_CREDENTIALS }}
 
       - name: Build and Push to ACR
         uses: actions/checkout@v2
